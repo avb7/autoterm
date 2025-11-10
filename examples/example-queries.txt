@@ -1,0 +1,126 @@
+# AutoTerm Example Queries
+# These are example queries you can try with AutoTerm
+
+# ====================
+# File Operations
+# ====================
+
+# find all python files
+# find files larger than 100MB
+# find files modified in the last 24 hours
+# count lines in all javascript files
+# find and delete empty directories
+# compress all videos in this folder
+# extract all zip files here
+# rename all jpg files to lowercase
+
+# ====================
+# System Monitoring
+# ====================
+
+# show me disk usage
+# find processes using more than 50% CPU
+# show memory usage by process
+# list all processes listening on ports
+# show network connections
+# check if port 8080 is in use
+# monitor disk IO
+# show system uptime and load
+
+# ====================
+# Text Processing
+# ====================
+
+# find files containing the word "TODO"
+# replace all tabs with spaces in python files
+# count occurrences of "error" in log files
+# extract email addresses from this file
+# sort lines and remove duplicates
+# show only unique lines from file
+# merge all text files into one
+
+# ====================
+# Git Operations
+# ====================
+
+# show git status with details
+# commit all changes with message "update"
+# create a new branch called feature-x
+# show commits from last week
+# undo last commit but keep changes
+# list all branches
+# sync with remote main branch
+# show files changed in last commit
+
+# ====================
+# Docker & Containers
+# ====================
+
+# list all running containers
+# stop all containers
+# remove unused docker images
+# show container logs
+# inspect container configuration
+# build image from current directory
+
+# ====================
+# Network & Web
+# ====================
+
+# download file from URL
+# check if website is up
+# find my public IP address
+# test connection to server
+# scan for open ports
+# show DNS records for domain
+
+# ====================
+# Archives & Compression
+# ====================
+
+# create tar.gz of this directory
+# extract tar.gz file
+# create zip excluding node_modules
+# list contents of tar file
+# compress with maximum compression
+
+# ====================
+# User & Permissions
+# ====================
+
+# show all users on system
+# change file permissions to 755
+# change owner recursively
+# show groups for user
+# add execute permission to script
+
+# ====================
+# Iterative Examples
+# ====================
+
+# Query 1: find log files
+# Query 2: only from last week
+# Query 3: sort by size
+
+# Query 1: list all processes
+# Query 2: filter by chrome
+# Query 3: kill them all
+
+# Query 1: find python files
+# Query 2: in src directory only
+# Query 3: show line counts
+# Query 4: sort by lines
+
+# ====================
+# Advanced Examples
+# ====================
+
+# backup database with timestamp
+# sync files excluding hidden
+# find duplicate files by hash
+# batch rename with pattern
+# monitor file changes in realtime
+# create symbolic links for all files
+# find and fix file permissions recursively
+# generate SSH key pair
+

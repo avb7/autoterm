@@ -1,0 +1,189 @@
+.TH AUTOTERM 1 "November 2025" "AutoTerm 1.0.0" "User Commands"
+.SH NAME
+autoterm \- AI-powered terminal command assistant
+.SH SYNOPSIS
+.B autoterm-backend
+[\fB\-\-setup\fR] [\fB\-\-test\fR] [\fB\-\-version\fR] [\fIQUERY\fR]
+.SH DESCRIPTION
+.B AutoTerm
+is an AI-powered terminal assistant that translates natural language queries into executable shell commands. It integrates seamlessly with zsh, providing instant command suggestions with context awareness.
+.PP
+AutoTerm uses Groq's ultra-fast AI models to generate commands based on your natural language input. It maintains conversation context throughout your session, allowing for iterative refinement and complex multi-step command generation.
+.SH USAGE
+In your terminal, type a query starting with
+.B #
+followed by your request in natural language, then press
+.B Tab
+twice to generate a command.
+.PP
+.B Example:
+.PP
+.RS
+# find all python files modified today
+.RE
+.PP
+Press
+.B Tab Tab
+to generate:
+.PP
+.RS
+find . -name "*.py" -type f -mtime 0
+.RE
+.SH KEY BINDINGS
+.TP
+.B Tab Tab
+Generate command from query (when line starts with #)
+.TP
+.B Enter
+Execute the suggested command
+.TP
+.B Escape
+Cancel and return to normal prompt
+.TP
+.B Tab
+(after suggestion) Show conversation history and refine query
+.SH COMMANDS
+.TP
+.B # clear
+Clear conversation context and start fresh
+.TP
+.B # reset
+Same as "# clear"
+.SH OPTIONS
+.TP
+.B \-\-setup
+Configure Groq API key
+.TP
+.B \-\-test
+Test connection to Groq API
+.TP
+.B \-\-version
+Display version information
+.TP
+.B \-\-context \fIJSON\fR
+Provide conversation context as JSON (used internally)
+.SH CONTEXT PERSISTENCE
+AutoTerm maintains conversation context throughout your terminal session. Each new query automatically includes information from previous queries and commands, allowing the AI to understand refinements like "sort by size" or "only in src directory".
+.PP
+The context persists until you:
+.IP \(bu 2
+Type
+.B # clear
+or
+.B # reset
+.IP \(bu 2
+Press
+.B Escape
+to cancel a command
+.IP \(bu 2
+Close your terminal session
+.SH FILES
+.TP
+.I ~/.config/autoterm/config.json
+Configuration file containing API key (permissions: 600)
+.TP
+.I ~/.config/autoterm/history.json
+Command generation history (last 10 entries)
+.TP
+.I ~/.zshrc
+Shell configuration file where AutoTerm is sourced
+.SH ENVIRONMENT
+.TP
+.B GROQ_API_KEY
+Groq API key (overrides config file)
+.TP
+.B AUTOTERM_PREFIX
+Custom installation prefix for AutoTerm files
+.SH EXAMPLES
+.TP
+.B Find files:
+.RS
+# find all log files larger than 10MB
+.RE
+.TP
+.B System monitoring:
+.RS
+# show me processes using more than 50% CPU
+.RE
+.TP
+.B Git operations:
+.RS
+# commit all changes with message "fix bug"
+.RE
+.TP
+.B File operations:
+.RS
+# compress all videos in this folder
+.RE
+.TP
+.B Iterative refinement:
+.RS
+# find python files
+.br
+(Press Enter, then type a new query)
+.br
+# only in src directory
+.br
+(AI remembers previous context)
+.RE
+.SH INSTALLATION
+.SS System-wide installation:
+.RS
+sudo make install
+.RE
+.SS User installation:
+.RS
+make install-user
+.RE
+.SS Configuration:
+.RS
+autoterm-backend --setup
+.br
+source ~/.zshrc
+.RE
+.SH UNINSTALLATION
+.SS System-wide:
+.RS
+sudo make uninstall
+.RE
+.SS User installation:
+.RS
+make uninstall-user
+.RE
+.SH DEPENDENCIES
+.IP \(bu 2
+Python 3.7+
+.IP \(bu 2
+zsh shell
+.IP \(bu 2
+groq Python package
+.IP \(bu 2
+Groq API key (free at https://console.groq.com)
+.SH TROUBLESHOOTING
+.TP
+.B API key not found
+Run:
+.B autoterm-backend --setup
+.TP
+.B Connection failed
+Check your API key and internet connection with:
+.B autoterm-backend --test
+.TP
+.B Double-tab not working
+Ensure AutoTerm is sourced in ~/.zshrc:
+.br
+source /path/to/autoterm.zsh
+.SH SEE ALSO
+.BR zsh (1),
+.BR python3 (1)
+.PP
+Project homepage: <https://github.com/yourusername/autoterm>
+.br
+Groq API documentation: <https://console.groq.com/docs>
+.SH AUTHOR
+Written for AI-powered terminal assistance using Groq's fast inference models.
+.SH COPYRIGHT
+MIT License - Free to use and modify.
+.SH BUGS
+Report bugs at: https://github.com/yourusername/autoterm/issues
+
