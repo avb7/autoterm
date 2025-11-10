@@ -1,0 +1,326 @@
+# ============================================
+# AutoTerm .gitignore
+# ============================================
+
+# ============================================
+# Sensitive Data (NEVER commit!)
+# ============================================
+config.json              # Contains API keys
+history.json             # Command history
+*.key
+*.pem
+.env
+.env.local
+
+# ============================================
+# Python
+# ============================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+htmlcov/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+docs/_static/
+docs/_templates/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# ============================================
+# IDE / Editors
+# ============================================
+# VSCode
+.vscode/
+*.code-workspace
+
+# JetBrains (PyCharm, IntelliJ, etc.)
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Vim
+*.swp
+*.swo
+*.swn
+*~
+.netrwhist
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Atom
+.atom/
+
+# ============================================
+# OS-specific
+# ============================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.directory
+.Trash-*
+.nfs*
+
+# ============================================
+# Build / Distribution
+# ============================================
+*.o
+*.a
+*.la
+*.lo
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+*.app
+
+# ============================================
+# Logs
+# ============================================
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ============================================
+# Temporary / Cache files
+# ============================================
+*.tmp
+*.temp
+*.bak
+*.backup
+*.cache
+.sass-cache/
+
+# ============================================
+# Project-specific (Old/Deprecated Files)
+# ============================================
+# These are old files from refactoring - kept for reference but not tracked
+ai_terminal.py           # Old backend name (now bin/autoterm)
+autoterm.zsh             # Old location (now lib/autoterm.zsh)
+setup.sh                 # Old installer (now install.sh with Makefile)
+requirements.txt         # Not needed (deps in install scripts)
+
+# ============================================
+# Development / Testing
+# ============================================
+# Test artifacts
+.pytest_cache/
+test-results/
+test-reports/
+*.test
+
+# Debugging
+*.debug
+debug/
+.debug/
+
+# Local development
+local/
+tmp/
+temp/
+scratch/
+
+# Documentation builds
+docs/_build/
+docs/.doctrees/
+
+# ============================================
+# Package Managers
+# ============================================
+node_modules/
+package-lock.json
+yarn.lock
+.pnp
+.pnp.js
+
+# ============================================
+# Archives
+# ============================================
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# ============================================
+# Notes / TODO files (personal)
+# ============================================
+TODO.txt
+NOTES.txt
+notes/
+scratch/
+.scratch/
+
+# ============================================
+# CI/CD (if added in future)
+# ============================================
+.gitlab-ci-local/
+.circleci/local/
+
+# ============================================
+# Security scanning
+# ============================================
+.snyk
+
+# ============================================
+# End of .gitignore
+# ============================================
