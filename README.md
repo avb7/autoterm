@@ -1,5 +1,4 @@
-# AutoTerm - AI-Powered Terminal Assistant 🤖⚡
-
+# autoterm - superfast AI in your terminal
 Transform your terminal with AI. Type what you want in natural language, get the perfect command instantly.
 
 ```bash
